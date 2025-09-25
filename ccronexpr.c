@@ -83,6 +83,12 @@ struct tm *localtime_r(const time_t *timep, struct tm *result);
 time_t _mkgmtime(struct tm* tm);
 #endif /* __MINGW32__ */
 
+#if defined(ESP8266) || defined(ESP_PLATFORM) || defined(TARGET_LIKE_MBED)
+  #if !defined(CRON_USE_LOCAL_TIME)
+    #define CRON_USE_LOCAL_TIME
+  #endif
+#endif
+
 /* function definitions */
 #ifndef CRON_USE_LOCAL_TIME
 
