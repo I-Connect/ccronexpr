@@ -1,0 +1,9 @@
+{
+  "name": "ccronexpr",
+  "build": {
+    "srcFilter": [
+      "+<*>",
+      "-<ccronexpr_test.c>"
+    ]
+  }
+}
